@@ -455,19 +455,6 @@
 	status = "disabled";
 };
 
-&ehci {
-	samsung,vbus-gpio = <&gpf0 7 0>;
-	status = "okay";
-
-	/*port@0 {
-		status = "okay";
-	};*/
-
-	port@1 {
-		status = "okay";
-	};
-};
-
 &exynos_usbphy {
 	vbus-supply = <&esafeout1_reg>;
 	status = "okay";
@@ -789,7 +776,6 @@
 				regulator-name = "VHSIC_1.8V";
 				regulator-min-microvolt = <1800000>;
 				regulator-max-microvolt = <1800000>;
-				regulator-always-on;
 				regulator-state-mem {
 					regulator-on-in-suspend;
 				};
@@ -964,13 +950,6 @@
 	status = "okay";
 	bus-width = <8>;
 	cap-mmc-highspeed;
-};
-
-&ohci {
-	status = "okay";
-	/*port@0 {
-		status = "okay";
-	};*/
 };
 
 &pmu_system_controller {
